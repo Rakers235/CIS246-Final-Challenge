@@ -1,0 +1,33 @@
+Script started on Tue 15 Dec 2020 02:11:54 PM EST
+[ryan@localhost ~]$ pwd
+/home/ryan
+[ryan@localhost ~]$ cd /
+[ryan@localhost /]$ mkdir engineering
+mkdir: cannot create directory ‘engineering’: Permission denied
+[ryan@localhost /]$ mkdir engineering[1@s[1@u[1@d[1@o[1@ 
+[sudo] password for ryan: 
+[ryan@localhost /]$ sudo mkdir engineering[K[K[K[K[K[K[K[K[K[K[K[K Sa[K[Ksales
+[ryan@localhost /]$ sudo mkdir sales[K[K[K[K[Kis
+[ryan@localhost /]$ ls
+[0m[01;36mbin[0m   [01;34mdev[0m          [01;34metc[0m   [01;34mis[0m   [01;36mlib64[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m    [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[01;34mboot[0m  [01;34mengineering[0m  [01;34mhome[0m  [01;36mlib[0m  [01;34mmedia[0m  [01;34mopt[0m  [01;34mroot[0m  [01;34msales[0m  [01;34msrv[0m   [30;42mtmp[0m  [01;34mvar[0m
+[ryan@localhost /]$ groupaddsgroupaddugroupadddgroupaddogroupadd groupadd[C[C[C[C[C[C[C[C [K[Kd engineering
+[sudo] password for ryan: 
+[ryan@localhost /]$ sudo groupadd engineering[K[K[K[K[K[K[K[K[K[K[Ksales
+[ryan@localhost /]$ sudo groupadd sales[K[K[K[K[Kis
+[ryan@localhost /]$ groups
+ryan wheel
+[ryan@localhost /]$ sudo useradd engin_admin[C[C[C engin_admin- engin_adminm engin_admin[C[C[C[C[C[C[C[C[C[C[C[C
+[ryan@localhost /]$ sudo usermod -a -G engineering engin_admin
+[ryan@localhost /]$ grep engineering /etc/group
+[01;31m[Kengineering[m[K:x:1001:engin_admin
+[ryan@localhost /]$ grep engineering /etc/group[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo usermod -a -G engineering engin_admin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Padd -m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgroups[Ksudo groupadd issales[3Pis[10Pgroupssudo useradd -m engin_admin[15@mod -a -G engineering[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pgrep engineering /etc/group[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo usermod -a -G engineering engin_admin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Padd -m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgroups[Ksudo groupadd issalesengineering[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Ksudo mkdir is[K[K[K[K[K[K[K[K[K[Ko s[Kuseradd -m sales_admin
+[sudo] password for ryan: 
+[ryan@localhost /]$ sudo ius[K[K[Kuseradd -m is_admin
+[ryan@localhost /]$ runlevel
+N 3
+[ryan@localhost /]$ 
+[ryan@localhost /]$ exit
+exit
+
+Script done on Tue 15 Dec 2020 09:16:34 PM EST
