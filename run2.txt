@@ -1,0 +1,371 @@
+Script started on Wed 16 Dec 2020 03:04:52 PM EST
+[ryan@localhost ~]$ cd /
+[ryan@localhost /]$ ls
+[0m[01;36mbin[0m   [01;34mdev[0m          [01;34metc[0m   [01;34mis[0m   [01;36mlib64[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m    [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[01;34mboot[0m  [01;34mengineering[0m  [01;34mhome[0m  [01;36mlib[0m  [01;34mmedia[0m  [01;34mopt[0m  [01;34mroot[0m  [01;34msales[0m  [01;34msrv[0m   [30;42mtmp[0m  [01;34mvar[0m
+[ryan@localhost /]$ sudo useradd -m enginUser1
+[sudo] password for ryan: 
+Sorry, try again.
+[sudo] password for ryan: 
+[ryan@localhost /]$ sudo useradd -m enginUser1[K2
+[ryan@localhost /]$ sudo useradd -m salesUser1
+[ryan@localhost /]$ sudo useradd -m salesUser1[K2
+[ryan@localhost /]$ sudo useradd -m salesUser2[C[C[C[1PUser2[1PUser2[1PUser2[1PUser2[1PUser2iUser2sUser2[C[C[C[C[C[K`[K1
+[ryan@localhost /]$ sudo useradd -m isUser1[K2
+[ryan@localhost /]$ sudo usermod -a -G ed[K[Keingi[K[K[K[Kngineering enginUser1
+[ryan@localhost /]$ sudo usermod -a -G engineering enginUser1[K2
+[ryan@localhost /]$ sudo usermod -a -G engineering enginUser2[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksales salesUsere[K1
+[ryan@localhost /]$ sudo usermod -a -G sales salesUser1[K2
+[ryan@localhost /]$ sudo usermod -a -G sales salesUser2[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kis isUser1
+[ryan@localhost /]$ sudo usermod -a -G is isUser1[K2
+[ryan@localhost /]$ g[Kcat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ryan
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+systemd-journal:x:190:
+systemd-network:x:192:
+dbus:x:81:
+polkitd:x:998:
+ssh_keys:x:997:
+sshd:x:74:
+postdrop:x:90:
+postfix:x:89:
+chrony:x:996:
+ryan:x:1000:ryan
+engineering:x:1001:engin_admin,enginUser1,enginUser2
+sales:x:1002:salesUser1,salesUser2
+is:x:1003:isUser1,isUser2
+engin_admin:x:1004:
+sales_admin:x:1005:
+is_admin:x:1006:
+enginUser1:x:1007:
+enginUser2:x:1008:
+salesUser1:x:1009:
+salesUser2:x:1010:
+isUser1:x:1011:
+isUser2:x:1012:
+[ryan@localhost /]$ sudo usermod -a -G sales_admin sales[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[KG sales sales_admin
+[ryan@localhost /]$ sudo usermod -a -G sales sales_admin[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kis is_admin
+[ryan@localhost /]$ sudo usermod -a -G is is_adminsales sales_admin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[22Pcat /etc/group[C[C[C[1P /etc/group[1P /etc/group[1P /etc/groupt /etc/groupa /etc/groupi /etc/groupl /etc/group
+is:x:1003:isUser1,isUser2,is_admin
+engin_admin:x:1004:
+sales_admin:x:1005:
+is_admin:x:1006:
+enginUser1:x:1007:
+enginUser2:x:1008:
+salesUser1:x:1009:
+salesUser2:x:1010:
+isUser1:x:1011:
+isUser2:x:1012:
+[ryan@localhost /]$ tail /etc/group[C[C[C[C[1P /etc/group[1P /etc/group[1P /etc/group[1P /etc/groupc /etc/groupa /etc/groupt /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ryan
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+systemd-journal:x:190:
+systemd-network:x:192:
+dbus:x:81:
+polkitd:x:998:
+ssh_keys:x:997:
+sshd:x:74:
+postdrop:x:90:
+postfix:x:89:
+chrony:x:996:
+ryan:x:1000:ryan
+engineering:x:1001:engin_admin,enginUser1,enginUser2
+sales:x:1002:salesUser1,salesUser2,sales_admin
+is:x:1003:isUser1,isUser2,is_admin
+engin_admin:x:1004:
+sales_admin:x:1005:
+is_admin:x:1006:
+enginUser1:x:1007:
+enginUser2:x:1008:
+salesUser1:x:1009:
+salesUser2:x:1010:
+isUser1:x:1011:
+isUser2:x:1012:
+[ryan@localhost /]$ grep /etc/a[Kpasswd[C /etc/passwd[C /etc/passwd[1P/etc/passwde /etc/passwdn /etc/passwdg /etc/passwdi /etc/passwdn /etc/passwd_ /etc/passwda /etc/passwdd /etc/passwdm /etc/passwdi /etc/passwdn /etc/passwd
+[01;31m[Kengin_admin[m[K:x:1001:1004::/home/[01;31m[Kengin_admin[m[K:/bin/bash
+[ryan@localhost /]$ grep engin_admin /etc/passwd[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P /etc/passwdi /etc/passwds /etc/passwdU /etc/passwds /etc/passwde /etc/passwdr /etc/passwd2 /etc/passwd
+[01;31m[KisUser2[m[K:x:1009:1012::/home/[01;31m[KisUser2[m[K:/bin/bash
+[ryan@localhost /]$ ls -al
+total 16
+dr-xr-xr-x.  20 root root  266 Dec 15 14:12 [0m[01;34m.[0m
+dr-xr-xr-x.  20 root root  266 Dec 15 14:12 [01;34m..[0m
+lrwxrwxrwx.   1 root root    7 Dec 15 13:22 [01;36mbin[0m -> [01;34musr/bin[0m
+dr-xr-xr-x.   5 root root 4096 Dec 16 14:51 [01;34mboot[0m
+drwxr-xr-x.  20 root root 3100 Dec 16 14:51 [01;34mdev[0m
+drwxr-xr-x.   2 root root    6 Dec 15 14:12 [01;34mengineering[0m
+drwxr-xr-x.  74 root root 8192 Dec 16 15:12 [01;34metc[0m
+drwxr-xr-x.  12 root root  174 Dec 16 15:07 [01;34mhome[0m
+drwxr-xr-x.   2 root root    6 Dec 15 14:12 [01;34mis[0m
+lrwxrwxrwx.   1 root root    7 Dec 15 13:22 [01;36mlib[0m -> [01;34musr/lib[0m
+lrwxrwxrwx.   1 root root    9 Dec 15 13:22 [01;36mlib64[0m -> [01;34musr/lib64[0m
+drwxr-xr-x.   2 root root    6 Apr 11  2018 [01;34mmedia[0m
+drwxr-xr-x.   2 root root    6 Apr 11  2018 [01;34mmnt[0m
+drwxr-xr-x.   2 root root    6 Apr 11  2018 [01;34mopt[0m
+dr-xr-xr-x. 129 root root    0 Dec 16 14:51 [01;34mproc[0m
+dr-xr-x---.   2 root root  114 Dec 15 13:24 [01;34mroot[0m
+drwxr-xr-x.  25 root root  740 Dec 16 14:51 [01;34mrun[0m
+drwxr-xr-x.   2 root root    6 Dec 15 14:12 [01;34msales[0m
+lrwxrwxrwx.   1 root root    8 Dec 15 13:22 [01;36msbin[0m -> [01;34musr/sbin[0m
+drwxr-xr-x.   2 root root    6 Apr 11  2018 [01;34msrv[0m
+dr-xr-xr-x.  13 root root    0 Dec 16 14:51 [01;34msys[0m
+drwxrwxrwt.   8 root root  211 Dec 16 14:52 [30;42mtmp[0m
+drwxr-xr-x.  13 root root  155 Dec 15 13:22 [01;34musr[0m
+drwxr-xr-x.  19 root root  267 Dec 15 13:25 [01;34mvar[0m
+[ryan@localhost /]$ sudo chown /engineering -R engin_admin [1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K:engineering /engineering/
+[sudo] password for ryan: 
+[ryan@localhost /]$ sudo chown -R engin_admin:engineering /engineering/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -al[K
+total 16
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [0m[01;34m.[0m
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [01;34m..[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mbin[0m -> [01;34musr/bin[0m
+dr-xr-xr-x.   5 root        root        4096 Dec 16 14:51 [01;34mboot[0m
+drwxr-xr-x.  20 root        root        3100 Dec 16 14:51 [01;34mdev[0m
+drwxr-xr-x.   2 engin_admin engineering    6 Dec 15 14:12 [01;34mengineering[0m
+drwxr-xr-x.  74 root        root        8192 Dec 16 15:12 [01;34metc[0m
+drwxr-xr-x.  12 root        root         174 Dec 16 15:07 [01;34mhome[0m
+drwxr-xr-x.   2 root        root           6 Dec 15 14:12 [01;34mis[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mlib[0m -> [01;34musr/lib[0m
+lrwxrwxrwx.   1 root        root           9 Dec 15 13:22 [01;36mlib64[0m -> [01;34musr/lib64[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmedia[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmnt[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mopt[0m
+dr-xr-xr-x. 129 root        root           0 Dec 16 14:51 [01;34mproc[0m
+dr-xr-x---.   2 root        root         114 Dec 15 13:24 [01;34mroot[0m
+drwxr-xr-x.  25 root        root         740 Dec 16 14:51 [01;34mrun[0m
+drwxr-xr-x.   2 root        root           6 Dec 15 14:12 [01;34msales[0m
+lrwxrwxrwx.   1 root        root           8 Dec 15 13:22 [01;36msbin[0m -> [01;34musr/sbin[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34msrv[0m
+dr-xr-xr-x.  13 root        root           0 Dec 16 14:51 [01;34msys[0m
+drwxrwxrwt.   8 root        root         211 Dec 16 14:52 [30;42mtmp[0m
+drwxr-xr-x.  13 root        root         155 Dec 15 13:22 [01;34musr[0m
+drwxr-xr-x.  19 root        root         267 Dec 15 13:25 [01;34mvar[0m
+[ryan@localhost /]$ ls -alsudo chown -R engin_admin:engineering /engineering/[C[C[1P[1P[1P[1P[1P[1@s[1@a[1@l[1@e[1@s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /engineering/[1P /engineering/[1P /engineering/[1P /engineering/[1P /engineering/[1P /engineering/[1P /engineering/[1P /engineering/[1P /engineering/[1P /engineering/[1P /engineering/s /engineering/a /engineering/l /engineering/e /engineering/s /engineering/[C[C[1Pngineering/[1Pgineering/[1Pineering/[1Pneering/[1Peering/[C[1Pring/[1Pring/[1Ping/[1Png/[1Pg/[1P/s/a/l/e/s/
+[ryan@localhost /]$ sudo chown -R sales_admin:sales /sales/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -al[K
+total 16
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [0m[01;34m.[0m
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [01;34m..[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mbin[0m -> [01;34musr/bin[0m
+dr-xr-xr-x.   5 root        root        4096 Dec 16 14:51 [01;34mboot[0m
+drwxr-xr-x.  20 root        root        3100 Dec 16 14:51 [01;34mdev[0m
+drwxr-xr-x.   2 engin_admin engineering    6 Dec 15 14:12 [01;34mengineering[0m
+drwxr-xr-x.  74 root        root        8192 Dec 16 15:12 [01;34metc[0m
+drwxr-xr-x.  12 root        root         174 Dec 16 15:07 [01;34mhome[0m
+drwxr-xr-x.   2 root        root           6 Dec 15 14:12 [01;34mis[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mlib[0m -> [01;34musr/lib[0m
+lrwxrwxrwx.   1 root        root           9 Dec 15 13:22 [01;36mlib64[0m -> [01;34musr/lib64[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmedia[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmnt[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mopt[0m
+dr-xr-xr-x. 129 root        root           0 Dec 16 14:51 [01;34mproc[0m
+dr-xr-x---.   2 root        root         114 Dec 15 13:24 [01;34mroot[0m
+drwxr-xr-x.  25 root        root         740 Dec 16 14:51 [01;34mrun[0m
+drwxr-xr-x.   2 sales_admin sales          6 Dec 15 14:12 [01;34msales[0m
+lrwxrwxrwx.   1 root        root           8 Dec 15 13:22 [01;36msbin[0m -> [01;34musr/sbin[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34msrv[0m
+dr-xr-xr-x.  13 root        root           0 Dec 16 14:51 [01;34msys[0m
+drwxrwxrwt.   8 root        root         211 Dec 16 14:52 [30;42mtmp[0m
+drwxr-xr-x.  13 root        root         155 Dec 15 13:22 [01;34musr[0m
+drwxr-xr-x.  19 root        root         267 Dec 15 13:25 [01;34mvar[0m
+[ryan@localhost /]$ ls -alsudo chown -R sales_admin:sales /sales/[C[C[C[C[C[1P[1P[1P[1P[1P[1@i[1@s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P /sales/o /sales/[1P /sales/i /sales/s /sales/[C[C[1Pales/[1Ples/[1Pes/[1Ps/[1P/i/s/
+[ryan@localhost /]$ sudo chown -R is_admin:is /is/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -al[K
+total 16
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [0m[01;34m.[0m
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [01;34m..[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mbin[0m -> [01;34musr/bin[0m
+dr-xr-xr-x.   5 root        root        4096 Dec 16 14:51 [01;34mboot[0m
+drwxr-xr-x.  20 root        root        3100 Dec 16 14:51 [01;34mdev[0m
+drwxr-xr-x.   2 engin_admin engineering    6 Dec 15 14:12 [01;34mengineering[0m
+drwxr-xr-x.  74 root        root        8192 Dec 16 15:12 [01;34metc[0m
+drwxr-xr-x.  12 root        root         174 Dec 16 15:07 [01;34mhome[0m
+drwxr-xr-x.   2 is_admin    is             6 Dec 15 14:12 [01;34mis[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mlib[0m -> [01;34musr/lib[0m
+lrwxrwxrwx.   1 root        root           9 Dec 15 13:22 [01;36mlib64[0m -> [01;34musr/lib64[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmedia[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmnt[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mopt[0m
+dr-xr-xr-x. 130 root        root           0 Dec 16 14:51 [01;34mproc[0m
+dr-xr-x---.   2 root        root         114 Dec 15 13:24 [01;34mroot[0m
+drwxr-xr-x.  25 root        root         740 Dec 16 14:51 [01;34mrun[0m
+drwxr-xr-x.   2 sales_admin sales          6 Dec 15 14:12 [01;34msales[0m
+lrwxrwxrwx.   1 root        root           8 Dec 15 13:22 [01;36msbin[0m -> [01;34musr/sbin[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34msrv[0m
+dr-xr-xr-x.  13 root        root           0 Dec 16 14:51 [01;34msys[0m
+drwxrwxrwt.   8 root        root         211 Dec 16 14:52 [30;42mtmp[0m
+drwxr-xr-x.  13 root        root         155 Dec 15 13:22 [01;34musr[0m
+drwxr-xr-x.  19 root        root         267 Dec 15 13:25 [01;34mvar[0m
+[ryan@localhost /]$ sudo chmod 770 /engineering/
+[ryan@localhost /]$ sudo +t /e
+engineering/ etc/         
+[ryan@localhost /]$ sudo +t /engineering/
+sudo: +t: command not found
+[ryan@localhost /]$ sudo +t /engineering/[C[1@ [1@c[1@h[1@m[1@o[1@d
+[ryan@localhost /]$ ls -akl[K[Kl
+total 16
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [0m[01;34m.[0m
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [01;34m..[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mbin[0m -> [01;34musr/bin[0m
+dr-xr-xr-x.   5 root        root        4096 Dec 16 14:51 [01;34mboot[0m
+drwxr-xr-x.  20 root        root        3100 Dec 16 14:51 [01;34mdev[0m
+drwxrwx--T.   2 engin_admin engineering    6 Dec 15 14:12 [37;44mengineering[0m
+drwxr-xr-x.  74 root        root        8192 Dec 16 15:12 [01;34metc[0m
+drwxr-xr-x.  12 root        root         174 Dec 16 15:07 [01;34mhome[0m
+drwxr-xr-x.   2 is_admin    is             6 Dec 15 14:12 [01;34mis[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mlib[0m -> [01;34musr/lib[0m
+lrwxrwxrwx.   1 root        root           9 Dec 15 13:22 [01;36mlib64[0m -> [01;34musr/lib64[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmedia[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmnt[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mopt[0m
+dr-xr-xr-x. 130 root        root           0 Dec 16 14:51 [01;34mproc[0m
+dr-xr-x---.   2 root        root         114 Dec 15 13:24 [01;34mroot[0m
+drwxr-xr-x.  25 root        root         740 Dec 16 14:51 [01;34mrun[0m
+drwxr-xr-x.   2 sales_admin sales          6 Dec 15 14:12 [01;34msales[0m
+lrwxrwxrwx.   1 root        root           8 Dec 15 13:22 [01;36msbin[0m -> [01;34musr/sbin[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34msrv[0m
+dr-xr-xr-x.  13 root        root           0 Dec 16 14:51 [01;34msys[0m
+drwxrwxrwt.   8 root        root         211 Dec 16 15:20 [30;42mtmp[0m
+drwxr-xr-x.  13 root        root         155 Dec 15 13:22 [01;34musr[0m
+drwxr-xr-x.  19 root        root         267 Dec 15 13:25 [01;34mvar[0m
+[ryan@localhost /]$ ls -alsudo chmod +t /engineering/[6P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@chmod 770[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pg/[1Pg/[1Pg/[1Pg/[1Pg/[1Pg/[1Pg/[1P/[1Pg/[1Pg/[C[1P/s/a/l/e/s/
+[ryan@localhost /]$ sudo chmod 770 /sales/[1P/[1P/[1P/[1P/[1P/i/o/[1P/s/
+[ryan@localhost /]$ sudo chmod 770 /is/sales/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -al[Ksudo chmod +t /engineering/[1P/[1P/[1P/[1P/[1P/[1P/[1P/[1P/[1P/[1P/[1P/s/a/l/e/s/
+[ryan@localhost /]$ sudo chmod +t /sales/[1P/[1P/[1P/[1P/[1P/i/s/
+[ryan@localhost /]$ sudo chmod +t /is/sales/[2P770 /is/sales/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -al[K
+total 16
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [0m[01;34m.[0m
+dr-xr-xr-x.  20 root        root         266 Dec 15 14:12 [01;34m..[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mbin[0m -> [01;34musr/bin[0m
+dr-xr-xr-x.   5 root        root        4096 Dec 16 14:51 [01;34mboot[0m
+drwxr-xr-x.  20 root        root        3100 Dec 16 14:51 [01;34mdev[0m
+drwxrwx--T.   2 engin_admin engineering    6 Dec 15 14:12 [37;44mengineering[0m
+drwxr-xr-x.  74 root        root        8192 Dec 16 15:12 [01;34metc[0m
+drwxr-xr-x.  12 root        root         174 Dec 16 15:07 [01;34mhome[0m
+drwxrwx--T.   2 is_admin    is             6 Dec 15 14:12 [37;44mis[0m
+lrwxrwxrwx.   1 root        root           7 Dec 15 13:22 [01;36mlib[0m -> [01;34musr/lib[0m
+lrwxrwxrwx.   1 root        root           9 Dec 15 13:22 [01;36mlib64[0m -> [01;34musr/lib64[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmedia[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mmnt[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34mopt[0m
+dr-xr-xr-x. 129 root        root           0 Dec 16 14:51 [01;34mproc[0m
+dr-xr-x---.   2 root        root         114 Dec 15 13:24 [01;34mroot[0m
+drwxr-xr-x.  25 root        root         740 Dec 16 14:51 [01;34mrun[0m
+drwxrwx--T.   2 sales_admin sales          6 Dec 15 14:12 [37;44msales[0m
+lrwxrwxrwx.   1 root        root           8 Dec 15 13:22 [01;36msbin[0m -> [01;34musr/sbin[0m
+drwxr-xr-x.   2 root        root           6 Apr 11  2018 [01;34msrv[0m
+dr-xr-xr-x.  13 root        root           0 Dec 16 14:51 [01;34msys[0m
+drwxrwxrwt.   8 root        root         211 Dec 16 15:20 [30;42mtmp[0m
+drwxr-xr-x.  13 root        root         155 Dec 15 13:22 [01;34musr[0m
+drwxr-xr-x.  19 root        root         267 Dec 15 13:25 [01;34mvar[0m
+[ryan@localhost /]$ echo This file contains confidentiua[K[Kal information for the department > /engineerinng/info.txt
+bash: /engineering/info.txt: Permission denied
+[ryan@localhost /]$ echo This file contains confidential information for the department > /engineerinng/info.txt[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csecho This file contains confidential information for the department > /engineering/info.txt[A[C[C[C[C[C[C[C[C[Cuecho This file contains confidential information for the department > /engineering/info.txt[A[C[C[C[C[C[C[C[C[Cdecho This file contains confidential information for the department > /engineering/info.txt[A[C[C[C[C[C[C[C[C[Coecho This file contains confidential information for the department > /engineering/info.txt[A[C[C[C[C[C[C[C[C[C echo This file contains confidential information for the department > /engin[Cering/info.txt[A[C[C[C[C[C[C[C[C[C
+
+bash: /engineering/info.txt: Permission denied
+[ryan@localhost /]$ cd den[K[K[Kengineering/
+bash: cd: engineering/: Permission denied
+[ryan@localhost /]$ sudo runser[K[K[K[Knuser -l eni[Kgin_admin -c 'echo This file contains confidentu[Kial information  for the department > /engineering/info.txt"[K'
+[sudo] password for ryan: 
+[ryan@localhost /]$ sudo runuser -l engin_admin -c 'echo This file contains confidential information  for the department > /engineering/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt's/info.txt'a/info.txt'l/info.txt'e/info.txt's/info.txt'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information f[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information fo[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information for[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information for [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information for t[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs_admin -c 'echo This file contains confidential information for [1@t[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca_admin -c 'echo This file contains confidential information for[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl_admin -c 'echo This file contains confidential information fo[1@r[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce_admin -c 'echo This file contains confidential information f[1@o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs_admin -c 'echo This file contains confidential information [1@f[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[ryan@localhost /]$ sudo runuser -l sales_admin -c 'echo This file contains confidential information  for the department > /sales/info.txt'[C[C[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'[1P/info.txt'i/info.txt's/info.txt'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information f[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information fo[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information for[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information for [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_admin -c 'echo This file contains confidential information for t[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci_admin -c 'echo This file contains confidential information for [1@t[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs_admin -c 'echo This file contains confidential information for[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'echo This file contains confidential information forr the department > /is/info.txt'[A[C[C[C[Csales_admin -c 'echo This file contains confidential information for the department > /sales/info.txt'[Ais_admin -c 'echo This file contains confidential information for[6P the department > /is/info.txt'[K[Kggggg[Kg[Kg[K[Kg[Kg[K
+> ^C
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'echo This file contains confidential information forr the department > /is/info.txggg[K[K[Kt[1P /is/info.txt[1P/is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[C[C[C[C[C[C[C[C[C[C[C[1P /is/info.txt[C[C[C[C[C[C[C[C[C[C[1P /is/info.txt[C[C[C[C[C[C[C[C[C[1P /is/info.txt[C[C[C[C[C[C[C[C[1P /is/info.txt[C[C[C[C[C[C[C[1P /is/info.txt[C[C[C[C[C[C[1P/is/info.txt[C[C[C[C[C[1P /is/info.txt[C[C[C[C[1P /is/info.txt[C[C[C[1P /is/info.txt[C[C[1P/is/info.txt[C[1P /is/info.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /[1Pis/info.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /i[1Ps/info.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/is[1P/info.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/[1Pinfo.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/i[1Pnfo.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/in[1Pfo.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/inf[1Po.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/info[1P.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/info.[1Ptxt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/info.t[1Pxt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/info.tx[1Pt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/info.txt[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /is/info.txt [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /is/info.txt
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P/is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P/is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P/is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P/is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txt[1P /is/info.txtl /is/info.txt[1P /is/info.txtc /is/info.txta /is/info.txtt /is/info.txt[C[C[C[C[C[C[C[C[C[C[C[C[C'
+This file contains confidential information for the department
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'cat /is/info.txt'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'l's' '/'i's'/'
+info.txt
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'ls /is/'-/is/'a/is/'l/is/' /is/'
+total 4
+drwxrwx--T.  2 is_admin is        22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root     root     266 Dec 15 14:12 ..
+-rw-rw-r--.  1 is_admin is_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'ls -al /is/'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'c'g'[1P'[1P'c'h'm'o'd' '7'4'0' '/'l's'/'i'n'f'o'.'t'x't'
+chmod: cannot access ‘/ls/info.txt’: No such file or directory
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'chmod 740 /ls/info.txt'[1Ps/info.txt'is/info.txt'
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'chmod 740 /is/info.txt'ls/info.txt'[11Pls -al /is/'
+total 4
+drwxrwx--T.  2 is_admin is        22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root     root     266 Dec 15 14:12 ..
+-rwxr-----.  1 is_admin is_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'ls -al /is/'chmod 740 /is/info.txt'ls/info.txt'is/info.txt'[1P[1@6
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'chmod 640 /is/info.txt'[11Pls -al /is/'
+total 4
+drwxrwx--T.  2 is_admin is        22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root     root     266 Dec 15 14:12 ..
+-rw-r-----.  1 is_admin is_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'ls -al /is/'[C[C[1P[1P[1@e[1@n[1@g[1@i[1@n[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/'[1P/'e/'n/'g/'i/'n/'e/'e/'r/'i/'n/'g/'
+total 4
+drwxrwx--T.  2 engin_admin engineering  22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root        root        266 Dec 15 14:12 ..
+-rw-rw-r--.  1 engin_admin engin_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l engin_admin -c 'ls -al /engineering/'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'c'g'h'[1P'[1P'h'm'o'd' '6'4'0' '/'e'n'g'i'n'e'e'r'i'n'g'/'i'n'f'o'.'t'x't'
+[ryan@localhost /]$ sudo runuser -l engin_admin -c 'chmod 640 /engineering/info.txt'[11Pls -al /engineering/'
+total 4
+drwxrwx--T.  2 engin_admin engineering  22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root        root        266 Dec 15 14:12 ..
+-rw-r-----.  1 engin_admin engin_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l engin_admin -c 'ls -al /engineering/'chmod 640 /engineering/info.txt'[11Pls -al /engineering/'[C[C[C[C[C[C[1P/'[1P/'[1P/'[1P/'[1P/'[1P/'[1P/'[1P/'[1P/'[1P/'[1P/'[1P'[C/'s/'a/'l/'e/'s/'[1P[1P[1P[1P[1P[1@s[1@a[1@l[1@e[1@w[1@s[1P[1P[1@s
+total 4
+drwxrwx--T.  2 sales_admin sales        22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root        root        266 Dec 15 14:12 ..
+-rw-rw-r--.  1 sales_admin sales_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l sales_admin -c 'ls -al /sales/'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'c'h'm'o'd' '6'4'0' '/'s'a'l'e's'/'i'n'f'o'.'t'x't'
+[ryan@localhost /]$ sudo runuser -l sales_admin -c 'chmod 640 /sales/info.txt'[11Pls -al /sales/'
+total 4
+drwxrwx--T.  2 sales_admin sales        22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root        root        266 Dec 15 14:12 ..
+-rw-r-----.  1 sales_admin sales_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ exit
+
+Script done on Wed 16 Dec 2020 03:39:59 PM EST
