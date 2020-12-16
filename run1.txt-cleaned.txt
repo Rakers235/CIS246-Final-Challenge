@@ -1,0 +1,33 @@
+Script started on Tue 15 Dec 2020 02:11:54 PM EST
+[ryan@localhost ~]$ pwd
+/home/ryan
+[ryan@localhost ~]$ cd /
+[ryan@localhost /]$ mkdir engineering
+mkdir: cannot create directory ‘engineering’: Permission denied
+[ryan@localhost /]$ 1@dir engineering
+[sudo] password for ryan:
+[ryan@localhost /]$ sudo mkdir saleseering
+[ryan@localhost /]$ sudo mkdir isles
+[ryan@localhost /]$ ls
+bin   dev	   etc	 is   lib64  mnt  proc	run    sbin  sys  usr
+boot  engineering  home	 lib  media  opt  root	sales  srv   tmp  var
+[ryan@localhost /]$ sudodgengineering
+[sudo] password for ryan:
+[ryan@localhost /]$ sudo groupadd saleseering
+[ryan@localhost /]$ sudo groupadd isles
+[ryan@localhost /]$ groups
+ryan wheel
+[ryan@localhost /]$ sudo usera-meengin_admin
+[ryan@localhost /]$ sudo usermod -a -G engineering engin_admin
+[ryan@localhost /]$ grep engineering /etc/group
+engineering:x:1001:engin_admin
+sudopuseradds-mnsales_adminingeengin_admingroup
+[sudo] password for ryan:
+[ryan@localhost /]$ sudo useradd -m is_admin
+[ryan@localhost /]$ runlevel
+N 3
+[ryan@localhost /]$
+[ryan@localhost /]$ exit
+exit
+
+Script done on Tue 15 Dec 2020 09:16:34 PM EST

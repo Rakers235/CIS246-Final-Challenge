@@ -1,0 +1,371 @@
+Script started on Wed 16 Dec 2020 03:04:52 PM EST
+[ryan@localhost ~]$ cd /
+[ryan@localhost /]$ ls
+bin   dev	   etc	 is   lib64  mnt  proc	run    sbin  sys  usr
+boot  engineering  home	 lib  media  opt  root	sales  srv   tmp  var
+[ryan@localhost /]$ sudo useradd -m enginUser1
+[sudo] password for ryan:
+Sorry, try again.
+[sudo] password for ryan:
+[ryan@localhost /]$ sudo useradd -m enginUser2
+[ryan@localhost /]$ sudo useradd -m salesUser1
+[ryan@localhost /]$ sudo useradd -m salesUser2
+[ryan@localhost /]$ sudo useradd i1User222ser2
+[ryan@localhost /]$ sudo useradd -m isUser2
+[ryan@localhost /]$ sudo usermod -a -G engineering enginUser1
+[ryan@localhost /]$ sudo usermod -a -G engineering enginUser2
+[ryan@localhost /]$ sudo usermod -a -GsalesnsalesUser1inUser2
+[ryan@localhost /]$ sudo usermod -a -G sales salesUser2
+[ryan@localhost /]$ sudo usermod -a -G islisUser1sUser2
+[ryan@localhost /]$ sudo usermod -a -G is isUser2
+[ryan@localhost /]$ cat /etc/group
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ryan
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+systemd-journal:x:190:
+systemd-network:x:192:
+dbus:x:81:
+polkitd:x:998:
+ssh_keys:x:997:
+sshd:x:74:
+postdrop:x:90:
+postfix:x:89:
+chrony:x:996:
+ryan:x:1000:ryan
+engineering:x:1001:engin_admin,enginUser1,enginUser2
+sales:x:1002:salesUser1,salesUser2
+is:x:1003:isUser1,isUser2
+engin_admin:x:1004:
+sales_admin:x:1005:
+is_admin:x:1006:
+enginUser1:x:1007:
+enginUser2:x:1008:
+salesUser1:x:1009:
+salesUser2:x:1010:
+isUser1:x:1011:
+isUser2:x:1012:
+[ryan@localhost /]$ sudo usermod -a -G sales_sales_admin
+[ryan@localhost /]$ sudo usermod -a -G islis_admin_admin
+tail//etc/group /]$ sudo usermod -a -G sales_sales_admin
+is:x:1003:isUser1,isUser2,is_admin
+engin_admin:x:1004:
+sales_admin:x:1005:
+is_admin:x:1006:
+enginUser1:x:1007:
+enginUser2:x:1008:
+salesUser1:x:1009:
+salesUser2:x:1010:
+isUser1:x:1011:
+isUser2:x:1012:
+[ryan@localhost cat//etc/groupgroup
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+wheel:x:10:ryan
+cdrom:x:11:
+mail:x:12:postfix
+man:x:15:
+dialout:x:18:
+floppy:x:19:
+games:x:20:
+tape:x:33:
+video:x:39:
+ftp:x:50:
+lock:x:54:
+audio:x:63:
+nobody:x:99:
+users:x:100:
+utmp:x:22:
+utempter:x:35:
+input:x:999:
+systemd-journal:x:190:
+systemd-network:x:192:
+dbus:x:81:
+polkitd:x:998:
+ssh_keys:x:997:
+sshd:x:74:
+postdrop:x:90:
+postfix:x:89:
+chrony:x:996:
+ryan:x:1000:ryan
+engineering:x:1001:engin_admin,enginUser1,enginUser2
+sales:x:1002:salesUser1,salesUser2,sales_admin
+is:x:1003:isUser1,isUser2,is_admin
+engin_admin:x:1004:
+sales_admin:x:1005:
+is_admin:x:1006:
+enginUser1:x:1007:
+enginUser2:x:1008:
+salesUser1:x:1009:
+salesUser2:x:1010:
+isUser1:x:1011:
+isUser2:x:1012:
+[ryan@localhost /]$ greengin_admin//etc/passwd
+engin_admin:x:1001:1004::/home/engin_admin:/bin/bash
+[ryan@localhost /]$ grep isUser2//etc/passwdsswd
+isUser2:x:1009:1012::/home/isUser2:/bin/bash
+[ryan@localhost /]$ ls -al
+total 16
+dr-xr-xr-x.  20 root root  266 Dec 15 14:12 .
+dr-xr-xr-x.  20 root root  266 Dec 15 14:12 ..
+lrwxrwxrwx.   1 root root    7 Dec 15 13:22 bin -> usr/bin
+dr-xr-xr-x.   5 root root 4096 Dec 16 14:51 boot
+drwxr-xr-x.  20 root root 3100 Dec 16 14:51 dev
+drwxr-xr-x.   2 root root    6 Dec 15 14:12 engineering
+drwxr-xr-x.  74 root root 8192 Dec 16 15:12 etc
+drwxr-xr-x.  12 root root  174 Dec 16 15:07 home
+drwxr-xr-x.   2 root root    6 Dec 15 14:12 is
+lrwxrwxrwx.   1 root root    7 Dec 15 13:22 lib -> usr/lib
+lrwxrwxrwx.   1 root root    9 Dec 15 13:22 lib64 -> usr/lib64
+drwxr-xr-x.   2 root root    6 Apr 11  2018 media
+drwxr-xr-x.   2 root root    6 Apr 11  2018 mnt
+drwxr-xr-x.   2 root root    6 Apr 11  2018 opt
+dr-xr-xr-x. 129 root root    0 Dec 16 14:51 proc
+dr-xr-x---.   2 root root  114 Dec 15 13:24 root
+drwxr-xr-x.  25 root root  740 Dec 16 14:51 run
+drwxr-xr-x.   2 root root    6 Dec 15 14:12 sales
+lrwxrwxrwx.   1 root root    8 Dec 15 13:22 sbin -> usr/sbin
+drwxr-xr-x.   2 root root    6 Apr 11  2018 srv
+dr-xr-xr-x.  13 root root    0 Dec 16 14:51 sys
+drwxrwxrwt.   8 root root  211 Dec 16 14:52 tmp
+drwxr-xr-x.  13 root root  155 Dec 15 13:22 usr
+drwxr-xr-x.  19 root root  267 Dec 15 13:25 var
+[ryan@localhost /]$ sudo chown:engineeringg/engineering/in
+[sudo] password for ryan:
+lsy-allocalhost /]$ sudo chown -R engin_admin:engineering /engineering/
+total 16
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 .
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 ..
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 bin -> usr/bin
+dr-xr-xr-x.   5 root	    root	4096 Dec 16 14:51 boot
+drwxr-xr-x.  20 root	    root	3100 Dec 16 14:51 dev
+drwxr-xr-x.   2 engin_admin engineering	   6 Dec 15 14:12 engineering
+drwxr-xr-x.  74 root	    root	8192 Dec 16 15:12 etc
+drwxr-xr-x.  12 root	    root	 174 Dec 16 15:07 home
+drwxr-xr-x.   2 root	    root	   6 Dec 15 14:12 is
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 lib -> usr/lib
+lrwxrwxrwx.   1 root	    root	   9 Dec 15 13:22 lib64 -> usr/lib64
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 media
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 mnt
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 opt
+dr-xr-xr-x. 129 root	    root	   0 Dec 16 14:51 proc
+dr-xr-x---.   2 root	    root	 114 Dec 15 13:24 root
+drwxr-xr-x.  25 root	    root	 740 Dec 16 14:51 run
+drwxr-xr-x.   2 root	    root	   6 Dec 15 14:12 sales
+lrwxrwxrwx.   1 root	    root	   8 Dec 15 13:22 sbin -> usr/sbin
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 srv
+dr-xr-xr-x.  13 root	    root	   0 Dec 16 14:51 sys
+drwxrwxrwt.   8 root	    root	 211 Dec 16 14:52 tmp
+drwxr-xr-x.  13 root	    root	 155 Dec 15 13:22 usr
+drwxr-xr-x.  19 root	    root	 267 Dec 15 13:25 var
+[ryan@localhost /]$ ssalesales/g/////ng//////:engineering /engineering/
+lsy-allocalhost /]$ sudo chown -R sales_admin:sales /sales/
+total 16
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 .
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 ..
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 bin -> usr/bin
+dr-xr-xr-x.   5 root	    root	4096 Dec 16 14:51 boot
+drwxr-xr-x.  20 root	    root	3100 Dec 16 14:51 dev
+drwxr-xr-x.   2 engin_admin engineering	   6 Dec 15 14:12 engineering
+drwxr-xr-x.  74 root	    root	8192 Dec 16 15:12 etc
+drwxr-xr-x.  12 root	    root	 174 Dec 16 15:07 home
+drwxr-xr-x.   2 root	    root	   6 Dec 15 14:12 is
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 lib -> usr/lib
+lrwxrwxrwx.   1 root	    root	   9 Dec 15 13:22 lib64 -> usr/lib64
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 media
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 mnt
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 opt
+dr-xr-xr-x. 129 root	    root	   0 Dec 16 14:51 proc
+dr-xr-x---.   2 root	    root	 114 Dec 15 13:24 root
+drwxr-xr-x.  25 root	    root	 740 Dec 16 14:51 run
+drwxr-xr-x.   2 sales_admin sales	   6 Dec 15 14:12 sales
+lrwxrwxrwx.   1 root	    root	   8 Dec 15 13:22 sbin -> usr/sbin
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 srv
+dr-xr-xr-x.  13 root	    root	   0 Dec 16 14:51 sys
+drwxrwxrwt.   8 root	    root	 211 Dec 16 14:52 tmp
+drwxr-xr-x.  13 root	    root	 155 Dec 15 13:22 usr
+drwxr-xr-x.  19 root	    root	 267 Dec 15 13:25 var
+[ryan@localhost /]$ suisis///es/R sales_admin:sales /sales/
+lsy-allocalhost /]$ sudo chown -R is_admin:is /is/
+total 16
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 .
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 ..
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 bin -> usr/bin
+dr-xr-xr-x.   5 root	    root	4096 Dec 16 14:51 boot
+drwxr-xr-x.  20 root	    root	3100 Dec 16 14:51 dev
+drwxr-xr-x.   2 engin_admin engineering	   6 Dec 15 14:12 engineering
+drwxr-xr-x.  74 root	    root	8192 Dec 16 15:12 etc
+drwxr-xr-x.  12 root	    root	 174 Dec 16 15:07 home
+drwxr-xr-x.   2 is_admin    is		   6 Dec 15 14:12 is
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 lib -> usr/lib
+lrwxrwxrwx.   1 root	    root	   9 Dec 15 13:22 lib64 -> usr/lib64
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 media
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 mnt
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 opt
+dr-xr-xr-x. 130 root	    root	   0 Dec 16 14:51 proc
+dr-xr-x---.   2 root	    root	 114 Dec 15 13:24 root
+drwxr-xr-x.  25 root	    root	 740 Dec 16 14:51 run
+drwxr-xr-x.   2 sales_admin sales	   6 Dec 15 14:12 sales
+lrwxrwxrwx.   1 root	    root	   8 Dec 15 13:22 sbin -> usr/sbin
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 srv
+dr-xr-xr-x.  13 root	    root	   0 Dec 16 14:51 sys
+drwxrwxrwt.   8 root	    root	 211 Dec 16 14:52 tmp
+drwxr-xr-x.  13 root	    root	 155 Dec 15 13:22 usr
+drwxr-xr-x.  19 root	    root	 267 Dec 15 13:25 var
+[ryan@localhost /]$ sudo chmod 770 /engineering/
+[ryan@localhost /]$ sudo +t /e
+engineering/ etc/
+[ryan@localhost /]$ sudo +t /engineering/
+sudo: +t: command not found
+[ryan@localhost /]$ sudo +t /engineering/
+[ryan@localhost /]$ ls -all
+total 16
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 .
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 ..
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 bin -> usr/bin
+dr-xr-xr-x.   5 root	    root	4096 Dec 16 14:51 boot
+drwxr-xr-x.  20 root	    root	3100 Dec 16 14:51 dev
+drwxrwx--T.   2 engin_admin engineering	   6 Dec 15 14:12 engineering
+drwxr-xr-x.  74 root	    root	8192 Dec 16 15:12 etc
+drwxr-xr-x.  12 root	    root	 174 Dec 16 15:07 home
+drwxr-xr-x.   2 is_admin    is		   6 Dec 15 14:12 is
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 lib -> usr/lib
+lrwxrwxrwx.   1 root	    root	   9 Dec 15 13:22 lib64 -> usr/lib64
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 media
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 mnt
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 opt
+dr-xr-xr-x. 130 root	    root	   0 Dec 16 14:51 proc
+dr-xr-x---.   2 root	    root	 114 Dec 15 13:24 root
+drwxr-xr-x.  25 root	    root	 740 Dec 16 14:51 run
+drwxr-xr-x.   2 sales_admin sales	   6 Dec 15 14:12 sales
+lrwxrwxrwx.   1 root	    root	   8 Dec 15 13:22 sbin -> usr/sbin
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 srv
+dr-xr-xr-x.  13 root	    root	   0 Dec 16 14:51 sys
+drwxrwxrwt.   8 root	    root	 211 Dec 16 15:20 tmp
+drwxr-xr-x.  13 root	    root	 155 Dec 15 13:22 usr
+drwxr-xr-x.  19 root	    root	 267 Dec 15 13:25 var
+[ryasales///////0]$ sudoachmod +t /engineering/
+[ryan@localhost /]$ sudo chmod 770 /is////
+sudoachmodl+ts/sales///////mod 770 /sales/
+[ryan@localhost /]$ sudo chmod +t /is////
+lsy-allocalhost /]$ sudo chmod 770//sales/
+total 16
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 .
+dr-xr-xr-x.  20 root	    root	 266 Dec 15 14:12 ..
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 bin -> usr/bin
+dr-xr-xr-x.   5 root	    root	4096 Dec 16 14:51 boot
+drwxr-xr-x.  20 root	    root	3100 Dec 16 14:51 dev
+drwxrwx--T.   2 engin_admin engineering	   6 Dec 15 14:12 engineering
+drwxr-xr-x.  74 root	    root	8192 Dec 16 15:12 etc
+drwxr-xr-x.  12 root	    root	 174 Dec 16 15:07 home
+drwxrwx--T.   2 is_admin    is		   6 Dec 15 14:12 is
+lrwxrwxrwx.   1 root	    root	   7 Dec 15 13:22 lib -> usr/lib
+lrwxrwxrwx.   1 root	    root	   9 Dec 15 13:22 lib64 -> usr/lib64
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 media
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 mnt
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 opt
+dr-xr-xr-x. 129 root	    root	   0 Dec 16 14:51 proc
+dr-xr-x---.   2 root	    root	 114 Dec 15 13:24 root
+drwxr-xr-x.  25 root	    root	 740 Dec 16 14:51 run
+drwxrwx--T.   2 sales_admin sales	   6 Dec 15 14:12 sales
+lrwxrwxrwx.   1 root	    root	   8 Dec 15 13:22 sbin -> usr/sbin
+drwxr-xr-x.   2 root	    root	   6 Apr 11  2018 srv
+dr-xr-xr-x.  13 root	    root	   0 Dec 16 14:51 sys
+drwxrwxrwt.   8 root	    root	 211 Dec 16 15:20 tmp
+drwxr-xr-x.  13 root	    root	 155 Dec 15 13:22 usr
+drwxr-xr-x.  19 root	    root	 267 Dec 15 13:25 var
+ng/info.txthost /]$ echo This file contains confidential information for the department > /engineerin
+bash: /engineering/info.txt: Permission denied
+sechofThistfile contains confidentialninformationdforitheidepartment >o/engineering/info.txtuechoeThis file contains confidential information for the department > /engineering/info.txtdecho This file contains confidential information for the department > /engineering/info.txtoecho This file contains confidential information for the department > /engineering/info.txt echo This file contains confidential information for the department > /enginering/info.txt
+
+bash: /engineering/info.txt: Permission denied
+[ryan@localhost /]$ cd engineering/
+bash: cd: engineering/: Permission denied
+[fornthecdepartment >u/engineering/info.txt'min -c 'echo This file contains confidential information
+[sudo] password for ryan:
+_adminh-cd'echomThis>filelcontainstconfidential informationi_admin -cn'echo Thisifileicontainsmconfidential information f_admin -c 'echo This file contains confidential information fo_admin -c 'echo This file contains confidential information for_admin -c 'echo This file contains confidential information for ts_admin -c 'echo This file contains confidential information for a_admin -c 'echo This file contains confidential information forl_admin -c 'echo This file contains confidential information foe_admin -c 'echo This file contains confidential information fs_admin -c 'echo This file contains confidential information
+
+_adminh-cd'echomThis>filencontains'confidential informationi_admin -cn'echo Thisifileicontainsmconfidential information f_admin -c 'echo This file contains confidential information fo_admin -c 'echo This file contains confidential information for_admin -c 'echo This file contains confidential information for ti_admin -c 'echo This file contains confidential information for s_admin -c 'echo This file contains confidential information for
+
+rrthe@department/>$/is/info.txt'sales_adminn-cc'echooThissfileecontainssconfidentiallinformationnforrthe department > /sales/info.txis_admin -c 'echo This file contains confidential information for the department > /is/info.txggggg
+> ^C
+//is/info.txt/is/info.txt/is/info.txt/is/info.txt/is/info.txt/is/info.txt/is/info.txt/is/info.txt/is/info.txt/is/info.txt/is/info.txt/is/info.txt/is/info.txt
+cat'/is/info.txt
+This file contains confidential information for the department
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'ls'/is/''''''''''
+info.txt
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'ls -al//is/'
+total 4
+drwxrwx--T.  2 is_admin is	  22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root	root	 266 Dec 15 14:12 ..
+-rw-rw-r--.  1 is_admin is_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'chmod'740'/ls/info.txt'
+chmod: cannot access ‘/ls/info.txt’: No such file or directory
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'chmod 740 /is/info.txt'
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'lsm-al7/is/'s/info.txt'
+total 4
+drwxrwx--T.  2 is_admin is	  22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root	root	 266 Dec 15 14:12 ..
+-rwxr-----.  1 is_admin is_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'chmodl1@6s/is/info.txt'
+[ryan@localhost /]$ sudo runuser -l is_admin -c 'lsm-al6/is/'s/info.txt'
+total 4
+drwxrwx--T.  2 is_admin is	  22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root	root	 266 Dec 15 14:12 ..
+-rw-r-----.  1 is_admin is_admin  63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuseengineering/' -c 'ls -al /is/'
+total 4
+drwxrwx--T.  2 engin_admin engineering	22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root	   root	       266 Dec 15 14:12 ..
+-rw-rw-r--.  1 engin_admin engin_admin	63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l engin_admin -c 'chmod'640'/engineering/info.txt'
+[ryan@localhost /]$ sudo runuser -l engin_admin -c 'lsm-al6/engineering/'g/info.txt'
+total 4
+drwxrwx--T.  2 engin_admin engineering	22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root	   root	       266 Dec 15 14:12 ..
+-rw-r-----.  1 engin_admin engin_admin	63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l engin_admin -c 'lsales/'''''''ering/'g/info.txt'
+total 4
+drwxrwx--T.  2 sales_admin sales	22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root	   root	       266 Dec 15 14:12 ..
+-rw-rw-r--.  1 sales_admin sales_admin	63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ sudo runuser -l sales_admin -c 'chmod'640'/sales/info.txt'
+[ryan@localhost /]$ sudo runuser -l sales_admin -c 'lsm-al6/sales/'s/info.txt'
+total 4
+drwxrwx--T.  2 sales_admin sales	22 Dec 16 15:32 .
+dr-xr-xr-x. 20 root	   root	       266 Dec 15 14:12 ..
+-rw-r-----.  1 sales_admin sales_admin	63 Dec 16 15:32 info.txt
+[ryan@localhost /]$ exit
+
+Script done on Wed 16 Dec 2020 03:39:59 PM EST
