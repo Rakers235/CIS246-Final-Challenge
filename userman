@@ -1,0 +1,60 @@
+#!/bin/bash
+echo User Management script Ryan Akers
+newestGroup=""
+function menu()
+{
+	echo 1\) Create a new group;
+	echo 2\) Create a new user;
+	echo 3\) Exit;
+}
+function newGroup()
+{
+	read -p "Enter new group name: " newGroupName;
+
+	if grep -q $newGroupName /etc/group;
+	then
+		echo Group already exists;
+		return 0;
+	fi
+
+	if groupadd $newGroupName;
+	then
+		echo Group created!;
+		newestGroup=$newGroupName;
+	else
+		echo Could not create group. Try another name.;
+	fi
+}
+function newUser()
+{
+	if [ -z "$newestGroup" ]
+	then
+		echo There are no new groups!;
+		read -p "Enter group name: " newestGroup;
+	else
+		echo This user will be added to the group \"$newestGroup\";
+	fi
+
+	read -p "Enter new user: " newUserName;
+	
+	if grep -q $newUserName /etc/passwd;
+	then
+		echo User already exists!;
+		return 0;
+	fi
+
+	if adduser $newUserName;
+	then
+		echo Enter password;
+		passwd $newUserName;
+		usermod -a -G $newUserName $newestGroup;
+	else
+		echo Unable to create user!;
+		return 0;
+	fi
+
+	mkdir /$newUserName;
+	chmod 770 /$newUserName;
+	chmod +t /$newUserName;
+}
+newUser
