@@ -57,4 +57,14 @@ function newUser()
 	chmod 770 /$newUserName;
 	chmod +t /$newUserName;
 }
-newUser
+while true; do
+	menu;
+	read -p "> " sel;
+	if [[ "$sel" == "1" ]]; then
+		newGroup;
+	elif [[ "$sel" == "2" ]]; then
+		newUser;
+	elif [[ "$sel" == "3" ]]; then
+		break
+	fi
+done
