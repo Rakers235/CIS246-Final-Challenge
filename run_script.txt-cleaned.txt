@@ -1,0 +1,42 @@
+Script started on Sat 19 Dec 2020 08:42:02 PM EST
+[ryan@localhost CIS246-Final-Challenge]$ sudo ./userman
+[sudo] password for ryan:
+User Management script Ryan Akers
+1) Create a new group
+2) Create a new user
+3) Exit
+> 1
+Enter new group name: knights
+Group created!
+1) Create a new group
+2) Create a new user
+3) Exit
+> 1
+Enter new group name: root
+Group already exists
+1) Create a new group
+2) Create a new user
+3) Exit
+> 2
+This user will be added to the group "knights"
+Enter new user: sirwilliam
+Enter password
+Changing password for user sirwilliam.
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: all authentication tokens updated successfully.
+1) Create a new group
+2) Create a new user
+3) Exit
+> 2
+This user will be added to the group "knights"
+Enter new user: root
+User already exists!
+1) Create a new group
+2) Create a new user
+3) Exit
+> 3
+[ryan@localhost CIS246-Final-Challenge]$ exit
+
+Script done on Sat 19 Dec 2020 08:43:12 PM EST

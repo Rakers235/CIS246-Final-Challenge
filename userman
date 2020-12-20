@@ -47,7 +47,7 @@ function newUser()
 	then
 		echo Enter password;
 		passwd $newUserName;
-		usermod -a -G $newUserName $newestGroup;
+		usermod -a -G $newestGroup $newUserName;
 	else
 		echo Unable to create user!;
 		return 0;
